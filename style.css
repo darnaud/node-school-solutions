@@ -1,6 +1,13 @@
-.title {
+.title
+{
 
-	color: red;
-	font: 'Comic Sans Ms';
+	text-decoration: underline;
 
+}
+
+*
+{
+	background-color: teal;
+	font-family:Comic Sans Ms;
+	color: yellow;
 }
