@@ -1,4 +1,4 @@
-back-to-basics
+Code School Solutions
 ==============
 
-A simple web page i use to try out html, css &amp; javascript functionalities
+A bank for the solutions I worked up from Code School challenges (learnyounode, javascripting etc...)
