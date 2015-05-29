@@ -1,9 +1,6 @@
 var http = require('http');
 var bl = require('bl');
 var url = process.argv[2];
-var charString = ""
-
-
 
 http.get(url, function(response){
 	response.setEncoding('utf-8');
