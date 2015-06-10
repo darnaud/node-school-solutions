@@ -6,8 +6,9 @@ myBoard.on('ready', function(){
 
 	servo.sweep()
 
-	myBoard.wait('ready', function(){
-		
+	this.wait(3000, function(){
+		servo.stop()
+		servo.center()
 	})
 
 })
