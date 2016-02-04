@@ -1,10 +1,7 @@
-var filepath = process.argv[2] ; 
-var fs = require('fs') ; // filesystem operation module
+var fs = require('fs')
 
-
-fs.readFile(filepath, function(err, contents){
+fs.readFile(process.argv[2], 'utf-8', function(err, data){
 	if (err)
-		console.log('*** Error ****');
-	else
-		console.log(contents.toString().split('\n').length - 1);
+		console.error("Some error")
+	console.log(data.split('\n').length - 1)
 })

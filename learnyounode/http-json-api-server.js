@@ -1,3 +1,5 @@
+
+
 // Official Solution
 
 var http = require('http')
@@ -34,3 +36,31 @@ var http = require('http')
       }
     })
     server.listen(Number(process.argv[2]))
+
+
+// My Solution
+/*
+var http = require('http')
+var url = require('url')
+
+var server = http.createServer(function(req,res){
+	res.writeHead(200,{'Content-Type':'application/json'})
+	var path = url.parse(req.url, true)
+	 if(req.method === 'GET' && path.pathname == '/api/parsetime'){
+	 	var date = new Date()
+	 	var hour = date.getHours()
+	 	var minute = date.getMinutes()
+	 	var second = date.getSeconds()
+	 	var unixtime = date.getTime()
+	 	var firstTime = JSON.stringify({hour:hour, minute:minute, second:second})
+	 	res.write(firstTime + '\n')
+	 	res.write(JSON.stringify({unixtime:unixtime}))
+	 	res.end() 
+	 }
+
+	res.end()
+})
+
+server.listen(process.argv[2], function(){
+	console.log('listening ...')
+})

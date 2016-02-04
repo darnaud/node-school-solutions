@@ -1,18 +1,15 @@
-var filepath = process.argv[3]
-var portNo = process.argv[2]
-var express = require('express')
-var app = express()
-var path = require('path')
+var express = require('express'),
+	app = express(),
+	path = require('path')
+
+
+app.set('views', process.argv[3] || path.join( __dirname , 'templates'))
 
 app.set('view engine', 'jade')
 
-app.set('views', filepath)
-
-app.get('/home', function(req,res){
-
-	res.render('index.jade', {date: new Date().toDateString()})
-
+app.get('/home', function (req, res){
+	
+	res.render('index', {date: new Date().toDateString()})
 })
 
-app.listen(portNo)
-
+app.listen(process.argv[2])

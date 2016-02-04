@@ -1,4 +1,5 @@
-var roundUp = 1.5
-var rounded = Math.round(roundUp)
+var roundUp = 1.5;
 
-console.log(rounded)
+var rounded = Math.round(roundUp);
+
+console.log(rounded);

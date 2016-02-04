@@ -1,14 +1,17 @@
-var http = require('http');
-var url = process.argv[2];
+var http = require('http')
 
-http.get(url, function (response){
-	response.on("data", function(data){
-		return console.log(data.toString());
+http.get(process.argv[2], function(res){
+	res.setEncoding('utf-8')
+
+	res.on("data", function (data) { 
+		console.log(data)
+	 })
+
+	res.on("error", function (data) { 
+		console.error('Sorry bro')
+ 	})
+
+	res.on("end", function (data) { 
+		console.log('')
 	})
-
-	response.on("error", function(){
-		return console.error("There is an error");
-	})
-
-	
 })

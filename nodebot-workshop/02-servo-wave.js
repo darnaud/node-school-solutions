@@ -1,14 +1,13 @@
-var five = require('johnny-five')
+var five = require('johnny-five');
+var board = new five.Board();
 
-var myBoard = new five.Board()
-myBoard.on('ready', function(){
-	var servo = new five.Servo(9)
-
-	servo.sweep()
-
-	this.wait(3000, function(){
-		servo.stop()
-		servo.center()
+board.on('ready', function(){
+	
+var servo = new five.Servo(9);
+	servo.sweep();
+	board.wait(3000, function(){
+		servo.stop().center();
 	})
+
 
 })

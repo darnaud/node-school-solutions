@@ -1,4 +1,7 @@
-function eat(food){
-	return food + ' tasted really good.'
+function eat (food){
+	return food + ' tasted really good.';
 }
-console.log(eat('bananas'))
+if (process.argv[2])
+	console.log(eat(process.argv[2]));
+else
+	console.log(eat('bananas'));

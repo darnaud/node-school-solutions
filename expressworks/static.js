@@ -1,8 +1,7 @@
-var express = require('express')
-var app = express()
-var portNo = process.argv[2]
-var file = process.argv[3]
+var express = require('express'),
+	app = express()
+	path = require('path')
 
-app.use(express.static(file || path.join(__dirname, 'public')))
+app.use(express.static(process.argv[3] || path.join(__dirname, 'public')))
 
-app.listen(portNo);
+app.listen(process.argv[2])
