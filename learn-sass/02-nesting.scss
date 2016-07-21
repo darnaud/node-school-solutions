@@ -1,0 +1,11 @@
+$var1: 0;
+$var2: red;
+
+aside {
+	ul {
+		margin: $var1;
+	}
+	a {
+		color: $var2;	
+	}
+}

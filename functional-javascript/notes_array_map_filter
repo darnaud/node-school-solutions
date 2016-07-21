@@ -1,4 +1,0 @@
-map modifies array elements
-filter modifies the array contents
-
-// second argument to reduce initialises countMap to {}
