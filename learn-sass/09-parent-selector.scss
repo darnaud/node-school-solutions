@@ -1,0 +1,8 @@
+$color: black;
+
+button {
+	color: $color;
+	&:focus {
+		color: red;
+	}
+}
