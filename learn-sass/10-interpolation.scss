@@ -1,0 +1,7 @@
+$selector: article;
+$field: color;
+$value: #f00;
+
+#{$selector} {
+	#{$field}: #{$value};
+}
