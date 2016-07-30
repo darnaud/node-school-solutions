@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# exercise no 4
+new_array=(I am ${@:2:2} and $4)
 
-
-arr=("$@")
-
-words=${arr[*]:1:2}
-
-words=(I am ${words[*]} and $4 )
-
-echo ${words[*]}
-
+echo ${new_array[*]}
